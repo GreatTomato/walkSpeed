@@ -1,0 +1,9 @@
+local WalkSpeed = 250-- Your value here
+local Camera = game.Workspace.CurrentCamera
+local UserInputService = game:GetService("UserInputService")
+
+game:GetService('RunService').Heartbeat:Connect(function()
+  if UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then
+    character.Humanoid.WalkSpeed = WalkSpeed
+  end
+end)
